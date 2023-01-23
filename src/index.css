@@ -1,13 +1,504 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito:wght@400;700&display=swap");
+
+/* for globel css styling */
+html {
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  background-color: #121212;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+.card {
+  width: 500px;
+  max-width: 90%;
+  min-height: 300px;
+  background: #1d1d1d;
+  padding: 30px;
+  border-radius: 20px;
+}
+.heading {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.text {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.6;
+  color: #c4c5c5;
+}
+.button {
+  display: flex;
+  justify-content: right;
+  margin: 30px 0px;
+}
+.button > button {
+  background: #07f;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 10px 30px;
+  transition: all 0.3s ease-in-out;
+}
+.button > button:hover {
+  background: rgba(0, 119, 255, 0.808);
+}
+
+/* for Navigation styling */
+.navbar {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.currentstyle {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+/* Home page styling */
+.signinwraper {
+  text-align: center;
+}
+.signinwraper > .link {
+  border: 0.5px solid;
+  padding: 0px 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #07f;
+}
+
+/* phone email component styling */
+.phoneEmailwraper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button_wrap {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.button_wrap > .button {
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background: #1d1d1d;
+  border: none;
+  border-radius: 10px;
+}
+.button_active {
+  background: rgb(27, 130, 247);
+  cursor: pointer;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Input dtyling */
+.Input {
+  border: none;
+  color: white;
+  width: 70%;
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  outline: none;
+  background: none;
+  padding: 5px;
+  border-bottom: 2px solid white;
+}
+
+.avatarWraper {
+  width: 110px;
+  height: 110px;
+  border: 6px solid #07f;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatarWraper > img {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+}
+.chooseimg {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: solid #07f;
+  border-radius: 20px;
+}
+.rightnav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rightnav button {
+  background: none;
+  color: #07f;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.rightnav img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #07f;
+}
+.imgpp {
+  background-position: center;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+}
+
+/* rooms styling */
+.roomsheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.roomsheader > .left {
+  display: flex;
+  gap: 20px;
+}
+.roomsheader > .left > .searcharea {
+  border-radius: 20px;
+  padding: 0 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: 300px;
+  color: #fff;
+  background-color: #262626;
+}
+.roomsheader > .left > .H1 {
+  position: relative;
+}
+.H1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background: #07f;
+}
+
+.searcharea > input {
+  background: transparent;
+  color: #fff;
+  width: 90%;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+.roomsheader > .right {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  padding: 5px 20px;
+  gap: 10px;
+  border-radius: 20px;
+  background-color: #23d223;
+}
+.roomsheader > .right:hover {
+  background-color: rgb(6, 144, 36);
+}
+
+/* room card */
+.roomlist {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.roomlist_card {
+  background-color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.speaker {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.speaker > .left > img {
+  position: absolute;
+  width: 40px;
+  top: 0;
+  left: 0;
+  background: #1d1d1d;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #07f;
+}
+.speaker > .left > img:last-child {
+  top: 20px;
+  left: 20px;
+}
+.speaker > .right {
+  margin-left: 100px;
+}
+.namewraper {
+  display: flex;
+  gap: 5px;
+}
+.peoplecount {
+  display: flex;
+  justify-content: right;
+  gap: 5px;
+}
+
+/* add room styling  vvvvvvIMP*/
+.modelMask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modelbody {
+  width: 50%;
+  border-radius: 20px;
+  max-width: 500px;
+  background: #1d1d1d;
+}
+.modelhader {
+  padding: 30px;
+  border-bottom: 2px solid #262626;
+}
+.roomsTypes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.box.active {
+  background-color: #262626;
+}
+.boximg {
+  font-size: 30px;
+}
+.modelfooter {
+  display: flex;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.modelfooter > button {
+  text-align: center;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #23d223;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+.modelfooter > button:hover {
+  background: #139813;
+  transition: all 0.3s ease-in-out;
+}
+.closebutton {
+  float: right;
+  font-size: 24px;
+  color: red;
+  margin: 10px;
+  cursor: pointer;
+}
+.singlespeaker > .left > img {
+  position: initial;
+}
+.singlespeaker > .right {
+  margin-left: 20px;
+}
+.goback {
+  display: flex;
+  color: white;
+  background: none;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  outline: none;
+  margin-top: 2rem;
+}
+.goback > span {
+  position: relative;
+}
+.goback > span::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background: #07f;
+  border-radius: 10px;
+}
+.userhead {
+  position: relative;
+  background: pink;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #07f;
+}
+.micBtn{
+  cursor: pointer;
+  background: #212121;
+  position: absolute;
+  color: white;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  box-sizing: content-box;
+  border-radius: 30px;
+  padding: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.userAvatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.clientsWrap {
+  margin-top: 4rem;
+  background-color: #1d1d1d;
+  min-height: calc(100vh - 205px);
+  padding: 2rem;
+}
+.top_clientsWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top_clientsWrap > div {
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  gap: 25px;
+}
+.top_clientsWrap>div>span{
+  padding: 0.7rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.top_clientsWrap>h2{
+  font-size: 20px;
+  font-weight: 700;
+}
+.top_clientsWrap>div>span:hover{
+  background-color: #333333;
+}
+.client{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.bottom_clientsWrap {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* for mobile responsive */
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
 }
